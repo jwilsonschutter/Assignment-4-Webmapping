@@ -125,6 +125,8 @@ map.on('style.load', function() {
 // my homies at mapbox with the toggle layers:
 // https://docs.mapbox.com/mapbox-gl-js/example/toggle-layers/
 
+// had some help from a friend figuring out for loops
+
 var toggleableLayerIds = ['income-fill', 'death-fill'];
 
 for (var i = 0; i < toggleableLayerIds.length; i++) {

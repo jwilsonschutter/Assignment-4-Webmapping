@@ -32,6 +32,11 @@ body {
 			margin-bottom: 5px;
 		}
 
+    #legend a{
+      color: #ECECEC;
+      font-weight: bold;
+    }
+
 #menu {
   background: #fff;
   position: absolute;
