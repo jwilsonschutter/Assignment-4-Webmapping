@@ -67,9 +67,6 @@ map.on('style.load', function() {
     var coordinates = e.features[0].geometry.MultiPolygon
     var description = `<div style="">hello world</div>`;
 
-    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-      coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-    }
 
     popup.setLngLat(coordinates).setHTML(description).addTo(map);
   });
@@ -131,9 +128,6 @@ map.on('style.load', function() {
     var coordinates = e.features[0].geometry.MultiPolygon
     var description = `<div style="">hello world</div>`;
 
-    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-      coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-    }
 
     popup.setLngLat(coordinates).setHTML(description).addTo(map);
   });
