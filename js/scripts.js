@@ -54,6 +54,31 @@ map.on('style.load', function() {
       'fill-opacity': 0.75
     }
   });
+
+  var popup = new mapboxgl.Popup({
+    closeButton: false,
+    closeOnClick: false
+  });
+
+  map.on('mouseenter', 'income-fill', function(e) {
+    // Change the cursor style as a UI indicator.
+    map.getCanvas().style.cursor = 'pointer';
+
+    var coordinates = e.features[0].geometry.MultiPolygon
+    var description = `<div style="">hello world</div>`;
+
+    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+      coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+    }
+
+    popup.setLngLat(coordinates).setHTML(description).addTo(map);
+  });
+
+  map.on('mouseleave', 'income-fill', function() {
+    map.getCanvas().style.cursor = '';
+    popup.remove();
+  });
+
 })
 
 //2nd layer
@@ -104,7 +129,7 @@ map.on('style.load', function() {
     map.getCanvas().style.cursor = 'pointer';
 
     var coordinates = e.features[0].geometry.MultiPolygon
-    var description = `<div style="">hello me fuck you</div>`;
+    var description = `<div style="">hello world</div>`;
 
     while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
       coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;

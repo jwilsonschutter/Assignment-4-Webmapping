@@ -51,7 +51,7 @@ body {
 
 #menu a {
   font-size: 13px;
-  color: #FFA07A;
+  color: #eee;
   display: block;
   margin: 0;
   padding: 0;
@@ -66,17 +66,17 @@ body {
 }
 
 #menu a:hover {
-  background-color: #F08080;
-  color: #404040;
+  background-color: #939799;
+  color: #eee;
 }
 
 #menu a.active {
-  background-color: #E9967A;
-  color: #ffffff;
+  background-color: #1d1d1d;
+  color: #eee;
 }
 
 #menu a.active:hover {
-  background: #CD5C5C;
+  background: #939799;
 }
 
 #mapcountainer {
